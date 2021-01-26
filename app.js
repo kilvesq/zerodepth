@@ -4,9 +4,10 @@ var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+const PORT = process.env.PORT || 3001;
 
-app.listen(3001, () => {
- console.log("Server running on port 3001");
+app.listen(PORT, () => {
+ console.log("Server running on port", PORT);
 });
 
 app.post("/zerodepth", (req, res, next) => {
